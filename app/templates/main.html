@@ -1,0 +1,48 @@
+<!DOCTYPE html> {% load static %}
+
+<head>
+    <title>WS BI</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <script src="{% static 'app/js/jquery.js' %}"></script>
+    <script src="{% static 'app/js/googlecharts.js' %}"></script>
+    <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+</head>
+
+<body class="text-center bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h1 class="float-left text-danger font-weight-bold">WS BI</h1>
+        <div style="margin-left:30px;">
+            <a href="{% url 'index' %}">
+                <button class="btn btn-info mb-2">INICIO</button>
+            </a>
+            <a href="{% url 'relatorios' %}">
+                <button class="btn btn-info mb-2">RELATORIOS</button>
+            </a>
+            <a href="{% url 'alertas' %}">
+                <button class="btn btn-info mb-2">ALERTAS</button>
+            </a>
+            <a href="{% url 'ferramentas' %}">
+                <button class="btn btn-info mb-2">FERRAMENTAS</button>
+            </a>
+            <a href="{% url 'atalhos' %}">
+                <button class="btn btn-info mb-2">ATALHOS</button>
+            </a>
+            <a href="{% url 'index' %}">
+                <button class="btn btn-info mb-2">FATURAMENTO</button>
+            </a>
+            <a href="{% url 'index' %}">
+                <button class="btn btn-info mb-2">COBRANÇA</button>
+            </a>
+            <a href="{% url 'index' %}">
+                <button class="btn btn-info mb-2">TI.</button>
+            </a>
+        </div>
+    </nav>
+    <!-- inicio corpo real do site -->
+    <div class="col-12 float-left border border-info rounded" style="min-height: 580px">
+        {% block content %} {% endblock %}
+    </div>
+    <!-- fim da div corpo real do site -->
+</body>

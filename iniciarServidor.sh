@@ -1,0 +1,1 @@
+cd //home//frinexti//aplicativos//frinexbi//&&ORACLE_HOME="/usr/lib/oracle/product/11.2.0/xe"&&LD_LIBRARY_PATH=$ORACLE_HOME/lib&&export ORACLE_HOME&&export LD_LIBRARY_PATH&&python3.6 manage.py runserver 0.0.0.0:80&&

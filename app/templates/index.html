@@ -1,0 +1,62 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+<h1 class="text-danger font-weight-bold">RELATORIO DO DIA</h1>
+<div class="rounded div-painel text-center">
+    <!--vendas do dia por vendedor-->
+    <div class="container col-8 border border-success float-left rounded bg-white" style="height: 350px" id="container_vendas_do_dia_por_vendedor">
+        <h3 class="text-info">
+            VENDAS POR VENDEDOR
+            <text id="total_venda_do_dia_vendedores" class="font-weight-bold text-danger">
+                Total vendido R$:00,00
+            </text>
+        </h3>
+        <div id="grafico_de_vendas_por_vendedor" style="height: 260px" class="rounded"></div>
+    </div>
+    <!--fim vendas do dia por vendedor-->
+    <div class="container col-4 border border-success float-left rounded" style="height: 350px">
+        <h3 class="text-info">VENDAS POR FILIAL</h3>
+        <div class="text-center col-12">
+            <div id="grafico_vendas_por_filial" class="bg-light"></div>
+        </div>
+        <h4 id="total_vendas_por_filial" class="font-weight-bold text-danger">TOTAL: R$:00,00</h4>
+    </div>
+    <div class="container col-3 border border-success float-left rounded" style="height: 160px"></div>
+    <div class="container col-5 border border-success float-left rounded" style="height: 160px">
+        <h class="text-info h6">PRODUTOS COM VENCIMENTO NOS PROXIMOS 30 DIAS</h>
+        <div id="slide_produtos" style="height:100px;">
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-warning btn-outline-danger " type="submit">teste 1</button>
+            </form>
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-warning btn-outline-danger " type="submit">teste 2</button>
+            </form>
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-warning btn-outline-danger " type="submit">teste 3</button>
+            </form>
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-warning btn-outline-danger " type="submit">teste 4</button>
+            </form>
+        </div>
+    </div>
+    <div class="container col-4 border border-success float-left rounded" style="height: 160px">
+        <h class=" h4 text-info">METAS ALCANÇADAS</h>
+        <div id="slide_metas" style="height:100px;">
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-success btn-outline-warning " type="submit">teste 1</button>
+            </form>
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-success btn-outline-warning " type="submit">teste 2</button>
+            </form>
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-success btn-outline-warning " type="submit">teste 3</button>
+            </form>
+            <form action="relatorio_do_produto" method="post">
+                <button class="btn bg-success btn-outline-warning " type="submit">teste 4</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="{% static 'app/js/index/slide.js' %}"></script>
+<script src="{% static 'app/js/index/buscar_horario_do_ultimo_pedido.js' %}"></script>
+<script src="{% static 'app/js/index/gerar_grafico_venda_do_dia_por_vendedor.js' %}"></script>
+<script src="{% static 'app/js/index/gerar_grafico_venda_do_dia_por_filial.js' %}"></script>
+{% endblock %}

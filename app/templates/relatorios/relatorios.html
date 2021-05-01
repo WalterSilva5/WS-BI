@@ -1,0 +1,31 @@
+{% extends 'main.html' %} {% block content %}
+<div class="container col-12 rounded div-painel text-center">
+    <h1 class="text-danger">RELATORIOS</h1>
+    <table class="table table-bordered">
+        <tbody class="container col-12 font-weight-bold">
+            <tr class="col-12 font-weight-bold">
+                <td style="width: 350px;">
+                    <a href="{% url 'relatorios_vendas_por_vendedor' %}" class="btn btn-primary col-12 font-weight-bold">VENDAS POR VENDEDOR</a>
+                </td>
+                <td style="width: 350px;">
+                    <button class="btn btn-secondary col-12 font-weight-bold">OPÇÃO 2</button>
+                </td>
+                <td style="width: 350px;">
+                    <button class="btn btn-secondary col-12 font-weight-bold">OPÇÃO 3</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 350px;">
+                    <button class="btn btn-secondary col-12 font-weight-bold">OPÇÃO 4</button>
+                </td>
+                <td style="width: 350px;">
+                    <button class="btn btn-secondary col-12 font-weight-bold">OPÇÃO 5</button>
+                </td>
+                <td style="width: 350px;">
+                    <button class="btn btn-secondary col-12 font-weight-bold">OPÇÃO 6</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

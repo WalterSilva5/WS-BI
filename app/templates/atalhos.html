@@ -1,0 +1,34 @@
+{% extends 'main.html' %}{% block content %}{% load static %}
+<h1 class="text-danger">ATALHOS</h1>
+
+<div
+  class="container col-12 rounded div-painel float-left d-flex justify-content-around"
+>
+  <!--polibras-->
+  <a
+    class="container rounded col-2 border border-danger float-left"
+    href="https://23.1.1.221/"
+    target="__blank"
+    style="height: 150px"
+    ><img
+      class="img-fluid col-12"
+      src="{% static 'app/img/icons/polibras.png' %}"
+    />
+    <p>POLIBRAS</p>
+  </a>
+  <!--fim polibras-->
+  <!--sitef-->
+  <a
+    class="container rounded col-2 border border-danger float-left"
+    href="http://sitefgwconciliacao.softwareexpress.com.br/sitefweb/"
+    target="__blank"
+    style="height: 150px"
+    ><img
+      class="img-fluid col-12"
+      src="{% static 'app/img/icons/sitef.png' %}"
+    />
+    <p>SITEF</p>
+  </a>
+  <!--fim sitef-->
+</div>
+{% endblock %}

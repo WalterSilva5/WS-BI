@@ -1,0 +1,4 @@
+postgresql:
+usuario: postgres
+senha: frinexti
+database: frinexbi
